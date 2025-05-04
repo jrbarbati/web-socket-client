@@ -2,6 +2,7 @@ logging:
   level:
     root: INFO
     com.personal: TRACE
+    com.personal.batch.hatcher: TRACE
 
 web-socket-poc:
   url: "ws://localhost:9001/ws-poc"
