@@ -1,0 +1,25 @@
+logging:
+  level:
+    root: INFO
+    com.personal: TRACE
+    com.personal.batch.hatcher: TRACE
+
+web-socket-poc:
+  url: "ws://localhost:9001/ws-poc"
+  publish:
+    heartbeat: "/app/heartbeat"
+    batch-run: "/app/batch-run"
+  topics:
+    batch-run: "/topic/batch-run"
+  scheduled:
+    heartbeat:
+      enabled: true
+      cron: '*/2 * * * * *'
+
+scheduled:
+  print-org-id:
+    enabled: true
+    cron: '0 * * * * *'
+
+server:
+  port: 9004

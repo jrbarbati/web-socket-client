@@ -14,8 +14,16 @@ public class PrintOrgIdExecutor
     @DistributedBatch(name = "printOrgId")
     public void printOrgId(@OrgIdParam int orgId)
     {
-        log.info("printOrgId started for org {}", orgId);
-        System.out.println(orgId);
-        log.info("printOrgId finished for org {}", orgId);
+        try
+        {
+            log.info("printOrgId started for org {}", orgId);
+            Thread.sleep(3000);
+            System.out.println(orgId);
+            log.info("printOrgId finished for org {}", orgId);
+        }
+        catch (Exception ignored)
+        {
+
+        }
     }
 }
