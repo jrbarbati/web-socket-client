@@ -17,7 +17,7 @@ public class PrintOrgIdExecutor
         try
         {
             log.info("printOrgId started for org {}", orgId);
-            Thread.sleep(3000);
+            Thread.sleep(250);
             System.out.println(orgId);
             log.info("printOrgId finished for org {}", orgId);
         }
